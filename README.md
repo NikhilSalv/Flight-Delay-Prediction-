@@ -35,14 +35,14 @@ data manipulation: pandas, numpy
 modeling: sklearn
 class definition: Random Forest
 
--# Exploratory Data Analysis
+- # Exploratory Data Analysis
 
 During EDA,the data has around 1 million records. We have treated the missing values by dropping the records with missing data. 
 The Federal Aviation Administration (FAA) considers a flight to be delayed when it is 15 minutes later than its scheduled time. Hence in the "DepDelay" column,
 we have mutated the data such as , if the flight is delayed by more than 15 minutes, it is considered as delayed(1), otherwise it is not delayed(0).
 After EDA part, we have sampled the data randomly into train dataset and test dataset(X_train, y_train, X_test, y_test). The ratio of train to test is 0.8/0.2 .
 
--# Model building
+- # Model building
 
 From sklearn, we have imported Random Forest Classifier and applied the algorithm on the train data. 
  After predicting the model on x_test, we have built counfusion matrix on y_test and predicted values.
