@@ -23,3 +23,25 @@ ArrDelay: Difference in minutes between scheduled and actual arrival time.
 Early arrivals show negative numbers, in minutes
 
 Distance: Distance between airports (miles)
+
+DepDelay: Difference in minutes between scheduled and actual departure time.
+Early departures show negative numbers(in minute)
+_________________________________________________________________________________________________________________________________________________________________________________
+From a technical point of view, the main aspects of python covered throughout the notebook are:
+
+visualization: matplolib, seaborn, basemap
+data manipulation: pandas, numpy
+modeling: sklearn
+class definition: Random Forest
+
+
+During EDA,the data has around 1 million records. We have treated the missing values by dropping the records with missing data. 
+The Federal Aviation Administration (FAA) considers a flight to be delayed when it is 15 minutes later than its scheduled time. Hence in the "DepDelay" column,
+we have mutated the data such as , if the flight is delayed by more than 15 minutes, it is considered as delayed(1), otherwise it is not delayed(0).
+ After EDA part, we have sampled the data into train dataset and test dataset(X_train, y_train, X_test, y_test). The ratio of train to test is 0.8/0.2 .
+ 
+ From sklearn, we have imported Random Forest Classifier and applied the algorithm on the train data. 
+ After predicting the model on x_test, we have built counfusion matrix on y_test and predicted values.
+ The model gives the accuracy og 98 %.
+ 
+ 
